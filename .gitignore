@@ -1,0 +1,14 @@
+﻿.vs/
+*.user
+*.suo
+bin/
+obj/
+.idea/
+*.log
+*.tlog
+*.cache
+*.db
+*.pdb
+*.tmp
+**/.git/
+README.md
