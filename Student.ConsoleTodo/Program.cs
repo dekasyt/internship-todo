@@ -1,77 +1,71 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-public class Todo
+﻿public class Task
 {
-    public string number = "";
-    public string zada4a = "";
-    public static void task(List<Todo> Lists)
+    public string Title;
+    public string Description;
+
+    public static void AddToList(List<Task> tasksList)
     {
-        Todo myTask = new Todo();
+        Task task = new Task();
         Console.WriteLine("Введите заголовок. По завершению ввода нажмите Enter:");
-        myTask.number = Console.ReadLine();
+        task.Title = Console.ReadLine();
         Console.WriteLine("Введите описание. По завершению ввода нажмите Enter:");
-        myTask.zada4a = Console.ReadLine();
-        Lists.Add(myTask);
+        task.Description = Console.ReadLine();
+        tasksList.Add(task);
     }
 }
-public class MainClass
+
+public class Program
 {
-    static List<Todo> Lists = new List<Todo>();
+    static List<Task> tasksList = new List<Task>();
+
     public static void Main()
     {
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("Для вызова выполняемой подпрограммы укажите ее номер и нажните Enter:\r\n1 - Посмотреть список задач\r\n2 - Добавить задачу");
-            string a = Console.ReadLine();
-            switch (a)
+            Console.WriteLine("Для вызова выполняемой подпрограммы укажите ее номер и нажните Enter:");
+            Console.WriteLine("1 - Посмотреть список задач");
+            Console.WriteLine("2 - Добавить задачу");
+
+            string input = Console.ReadLine();
+
+            switch (input)
             {
                 case "1": Read(); break;
                 case "2": Write(); break;
-                default: Console.WriteLine("Некорректный ввод\nДля повтора программы нажмите любую кнопку!"); break;
-
+                default:
+                    Console.WriteLine("Некорректный ввод\nДля повтора программы нажмите любую кнопку!");
+                    Console.ReadKey();
+                    break;
             }
-            
-            //Console.Clear();
-            continue;
         }
     }
+
     public static void Read()
     {
         while (true)
         {
             Console.Clear();
             Console.WriteLine("Список задач:");
-            foreach (Todo item in Lists) 
-            { 
-                Console.WriteLine($"Заголовок: {item.number}");
-                Console.WriteLine($"Описание: {item.zada4a}");
-                Console.WriteLine("");
+
+            foreach (Task task in tasksList)
+            {
+                Console.WriteLine($"Заголовок: {task.Title}");
+                Console.WriteLine($"Описание: {task.Description}\n");
             }
-            Console.WriteLine("Для выхода в меню нажмите ESC, или же для обновления списка любую кнопку");
+
+            Console.WriteLine("Для возврата к списку подпрограмм нажмите Esc");
             var key = Console.ReadKey(true).Key;
             if (key == ConsoleKey.Escape)
-            {
                 break;
-            }
-            else
-            {
-                continue;
-            }
         }
     }
 
     public static void Write()
     {
-        while (true)
-        {
-            Console.Clear();
-            Todo.task(Lists);
-            Console.WriteLine("нажмите любую кнопку для выхода в меню");
-            var key = Console.ReadKey(true).Key;
-            break;
-        }
+        Console.Clear();
+        Task.AddToList(tasksList);
+        Console.WriteLine("Задача добавлена. Нажмите любую клавишу для возврата в меню.");
+        Console.ReadKey(true);
     }
 }
