@@ -1,14 +1,8 @@
 ﻿namespace Student.ConsoleTodo
 {
-    /// <summary>
-    /// Главный класс программы.
-    /// </summary>
     public class Program
     {
         static List<Task> tasksList = new List<Task>();
-        /// <summary>
-        /// Меню.
-        /// </summary>
         public static void Main()
         {
             while (true)
@@ -23,11 +17,11 @@
                 switch (input)
                 {
                     case "1":
-                        Read();
+                        GetTasks();
                         break;
 
                     case "2":
-                        Write();
+                        AddTask();
                         break;
 
                     default:
@@ -35,12 +29,15 @@
                         Console.ReadKey();
                         break;
                 }
+
             }
+
         }
+
         /// <summary>
-        /// Посмотреть список всех задач и их описаний.
+        /// Получить задачи.
         /// </summary>
-        public static void Read()
+        public static void GetTasks()
         {
             while (true)
             {
@@ -59,12 +56,15 @@
                 { 
                     break;
                 }
+
             }
+
         }
+
         /// <summary>
-        /// Добаить новую задачу и ее список.
+        /// Добавить задачу.
         /// </summary>
-        public static void Write()
+        public static void AddTask()
         {
             Console.Clear();
             Task.AddToList(tasksList);

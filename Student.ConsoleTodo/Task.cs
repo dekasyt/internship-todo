@@ -1,7 +1,7 @@
 ﻿namespace Student.ConsoleTodo
 {
     /// <summary>
-    /// Представляет задачу с заголовком и описанием.
+    /// Задача.
     /// </summary>
     public class Task
     {
@@ -9,6 +9,7 @@
         /// Заголовок задачи.
         /// </summary>
         public string Title { get; set; }
+
         /// <summary>
         /// Описание задачи.
         /// </summary>
@@ -17,7 +18,7 @@
         /// <summary>
         /// Создает новую задачу и добавляет ее в список
         /// </summary>
-        /// <param name="tasksList"></param>
+        /// <param name="tasksList">Список задач</param>
         public static void AddToList(List<Task> tasksList)
         {
             Task task = new Task();
