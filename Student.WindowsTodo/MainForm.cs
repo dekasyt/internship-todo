@@ -94,7 +94,7 @@ namespace Student.WindowsTodo
         private void RefreshTaskList()
         {
             dataGridViewTasks.Rows.Clear();
-            foreach (var task in taskManager.GetTasks())
+            foreach (var task in taskManager.GetTasksList())
             {
                 dataGridViewTasks.Rows.Add(task.Title, task.Description);
             }

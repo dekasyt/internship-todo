@@ -30,10 +30,10 @@
         {
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.buttonNo = new System.Windows.Forms.Button();
-            this.buttonOK = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxTitle
@@ -42,7 +42,6 @@
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(249, 20);
             this.textBoxTitle.TabIndex = 0;
-            this.textBoxTitle.Text = "Введите заголовок задачи...";
             // 
             // buttonNo
             // 
@@ -54,15 +53,15 @@
             this.buttonNo.UseVisualStyleBackColor = true;
             this.buttonNo.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // buttonOK
+            // buttonSave
             // 
-            this.buttonOK.Location = new System.Drawing.Point(297, 226);
-            this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
-            this.buttonOK.TabIndex = 2;
-            this.buttonOK.Text = "Сохранить";
-            this.buttonOK.UseVisualStyleBackColor = true;
-            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            this.buttonSave.Location = new System.Drawing.Point(297, 226);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 2;
+            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.ButtonSave);
             // 
             // textBoxDescription
             // 
@@ -71,35 +70,34 @@
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(249, 75);
             this.textBoxDescription.TabIndex = 3;
-            this.textBoxDescription.Text = "Введите описание задачи...";
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Заголовок задачи:";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Location = new System.Drawing.Point(60, 37);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(102, 13);
+            this.labelTitle.TabIndex = 4;
+            this.labelTitle.Text = "Заголовок задачи:";
             // 
-            // label2
+            // labelDescription
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Описание задачи:";
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Location = new System.Drawing.Point(60, 94);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(98, 13);
+            this.labelDescription.TabIndex = 5;
+            this.labelDescription.Text = "Описание задачи:";
             // 
             // AddTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelDescription);
+            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.buttonOK);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonNo);
             this.Controls.Add(this.textBoxTitle);
             this.Name = "AddTask";
@@ -113,9 +111,9 @@
 
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Button buttonNo;
-        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelDescription;
     }
 }

@@ -10,10 +10,10 @@ namespace Student.WindowsTodo
         private readonly List<Task> tasks = new List<Task>();
 
         /// <summary>
-        /// Возвращает список всех задач.
+        /// Получить список задач.
         /// </summary>
         /// <returns>Список объектов типа Task</returns>
-        public List<Task> GetTasks()
+        public List<Task> GetTasksList()
         {
             return tasks;
         }
