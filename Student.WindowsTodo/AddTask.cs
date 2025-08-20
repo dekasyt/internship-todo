@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Student.WindowsTodo
@@ -19,8 +20,48 @@ namespace Student.WindowsTodo
         public AddTask()
         {
             InitializeComponent();
-            textBoxTitle.MaxLength = 25;
-            textBoxDescription.MaxLength = 50;
+
+            textBoxTitle.ForeColor = Color.Gray;
+            textBoxTitle.Text = "Введите заголовок задачи...";
+
+            textBoxTitle.GotFocus += (s, e) =>
+            {
+                if (textBoxTitle.ForeColor == Color.Gray)
+                {
+                    textBoxTitle.Text = "";
+                    textBoxTitle.ForeColor = Color.Black;
+                }
+            };
+
+            textBoxTitle.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBoxTitle.Text))
+                {
+                    textBoxTitle.Text = "Введите заголовок задачи...";
+                    textBoxTitle.ForeColor = Color.Gray;
+                }
+            };
+
+            textBoxDescription.ForeColor = Color.Gray;
+            textBoxDescription.Text = "Введите описание задачи...";
+
+            textBoxDescription.GotFocus += (s, e) =>
+            {
+                if (textBoxDescription.ForeColor == Color.Gray)
+                {
+                    textBoxDescription.Text = "";
+                    textBoxDescription.ForeColor = Color.Black;
+                }
+            };
+
+            textBoxDescription.LostFocus += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBoxDescription.Text))
+                {
+                    textBoxDescription.Text = "Введите описание задачи...";
+                    textBoxDescription.ForeColor = Color.Gray;
+                }
+            };
         }
 
         /// <summary>
@@ -28,28 +69,25 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ButtonSave(object sender, EventArgs e)
         {
             string title = textBoxTitle.Text.Trim();
             string description = textBoxDescription.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(title))
+            if (string.IsNullOrWhiteSpace(title) || textBoxTitle.ForeColor == Color.Gray)
             {
-                MessageBox.Show("Введите название задачи!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Введите заголовок задачи!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (title.Length > 25)
+            if (string.IsNullOrWhiteSpace(description) || textBoxDescription.ForeColor == Color.Gray)
             {
-                MessageBox.Show("Заголовок не может превышать 25 символов.");
+                MessageBox.Show("Введите описание задачи!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (description.Length > 50)
-            {
-                MessageBox.Show("Описание не может превышать 50 символов.");
-                return;
-            }
+
             NewTask = new Task(title, description);
+
             DialogResult = DialogResult.OK;
             Close();
         }

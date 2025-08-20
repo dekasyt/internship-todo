@@ -1,7 +1,7 @@
 ﻿namespace Student.WindowsTodo
 {
     /// <summary>
-    /// Представляет задачу с заголовком и описанием.
+    /// Задача.
     /// </summary>
     public class Task
     {
