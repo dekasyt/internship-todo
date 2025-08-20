@@ -33,3 +33,5 @@ _ReSharper*/
 *.rej
 *.patch
 *.diff
+/Student.WindowsTodo/obj
+/Student.WindowsTodo/bin
