@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.addButton = new System.Windows.Forms.Button();
+            this.BtnAdd_Click = new System.Windows.Forms.Button();
             this.dataGridViewTasks = new System.Windows.Forms.DataGridView();
             this.taskManagerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTasks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taskManagerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // addButton
+            // BtnAdd_Click
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 12);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(118, 23);
-            this.addButton.TabIndex = 2;
-            this.addButton.Text = "Добавить задачу";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.BtnAdd_Click.Location = new System.Drawing.Point(12, 12);
+            this.BtnAdd_Click.Name = "BtnAdd_Click";
+            this.BtnAdd_Click.Size = new System.Drawing.Size(118, 23);
+            this.BtnAdd_Click.TabIndex = 2;
+            this.BtnAdd_Click.Text = "Добавить задачу";
+            this.BtnAdd_Click.UseVisualStyleBackColor = true;
+            this.BtnAdd_Click.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridViewTasks
             // 
@@ -67,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 433);
             this.Controls.Add(this.dataGridViewTasks);
-            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.BtnAdd_Click);
             this.Name = "MainForm";
             this.Text = "Тодо";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTasks)).EndInit();
@@ -77,7 +77,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button BtnAdd_Click;
         private System.Windows.Forms.BindingSource taskManagerBindingSource;
         private System.Windows.Forms.DataGridView dataGridViewTasks;
     }

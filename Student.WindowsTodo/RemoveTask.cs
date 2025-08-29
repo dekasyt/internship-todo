@@ -21,7 +21,7 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void buttonYes_Click(object sender, EventArgs e)
+        private void btnConfirmDeletionTask_Clik(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             Close();
@@ -32,7 +32,7 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void buttonNo_Click(object sender, EventArgs e)
+        private void btnCancelDeletionTask_Clik(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
