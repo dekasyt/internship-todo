@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.buttonNo = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
+            this.BtnCancel_Click = new System.Windows.Forms.Button();
+            this.BtnSave_Click = new System.Windows.Forms.Button();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -43,25 +43,25 @@
             this.textBoxTitle.Size = new System.Drawing.Size(249, 20);
             this.textBoxTitle.TabIndex = 0;
             // 
-            // buttonNo
+            // BtnCancel_Click
             // 
-            this.buttonNo.Location = new System.Drawing.Point(216, 226);
-            this.buttonNo.Name = "buttonNo";
-            this.buttonNo.Size = new System.Drawing.Size(75, 23);
-            this.buttonNo.TabIndex = 1;
-            this.buttonNo.Text = "Отмена";
-            this.buttonNo.UseVisualStyleBackColor = true;
-            this.buttonNo.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.BtnCancel_Click.Location = new System.Drawing.Point(216, 226);
+            this.BtnCancel_Click.Name = "BtnCancel_Click";
+            this.BtnCancel_Click.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel_Click.TabIndex = 1;
+            this.BtnCancel_Click.Text = "Отмена";
+            this.BtnCancel_Click.UseVisualStyleBackColor = true;
+            this.BtnCancel_Click.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // buttonSave
+            // BtnSave_Click
             // 
-            this.buttonSave.Location = new System.Drawing.Point(297, 226);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonSave.TabIndex = 2;
-            this.buttonSave.Text = "Сохранить";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.ButtonSave);
+            this.BtnSave_Click.Location = new System.Drawing.Point(297, 226);
+            this.BtnSave_Click.Name = "BtnSave_Click";
+            this.BtnSave_Click.Size = new System.Drawing.Size(75, 23);
+            this.BtnSave_Click.TabIndex = 2;
+            this.BtnSave_Click.Text = "Сохранить";
+            this.BtnSave_Click.UseVisualStyleBackColor = true;
+            this.BtnSave_Click.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // textBoxDescription
             // 
@@ -97,8 +97,8 @@
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.buttonNo);
+            this.Controls.Add(this.BtnSave_Click);
+            this.Controls.Add(this.BtnCancel_Click);
             this.Controls.Add(this.textBoxTitle);
             this.Name = "AddTask";
             this.Text = "Новая задача";
@@ -110,8 +110,8 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.Button buttonNo;
-        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button BtnCancel_Click;
+        private System.Windows.Forms.Button BtnSave_Click;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelDescription;

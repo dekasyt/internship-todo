@@ -55,7 +55,7 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void addButton_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             using (var addForm = new AddTask())
             {
@@ -65,7 +65,6 @@ namespace Student.WindowsTodo
                     RefreshTaskList();
                 }
             }
-
         }
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace Student.WindowsTodo
     public partial class AddTask : Form
     {
         /// <summary>
-        /// Получает созданную задачу после нажатия ОК.
+        /// Новая задача.
         /// </summary>
         public Task NewTask { get; private set; }
 
@@ -69,7 +69,7 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void ButtonSave(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             string title = textBoxTitle.Text.Trim();
             string description = textBoxDescription.Text.Trim();
@@ -97,7 +97,7 @@ namespace Student.WindowsTodo
         /// </summary>
         /// <param name="sender">Источник события</param>
         /// <param name="e">Аргументы события</param>
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();

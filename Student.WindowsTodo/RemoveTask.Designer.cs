@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonYes = new System.Windows.Forms.Button();
-            this.buttonNo = new System.Windows.Forms.Button();
+            this.BtnConfirmDeletionTask_Clik = new System.Windows.Forms.Button();
+            this.BtnCancelDeletionTask_Clik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // buttonYes
+            // BtnConfirmDeletionTask_Clik
             // 
-            this.buttonYes.Location = new System.Drawing.Point(52, 107);
-            this.buttonYes.Name = "buttonYes";
-            this.buttonYes.Size = new System.Drawing.Size(75, 23);
-            this.buttonYes.TabIndex = 0;
-            this.buttonYes.Text = "Да";
-            this.buttonYes.UseVisualStyleBackColor = true;
-            this.buttonYes.Click += new System.EventHandler(this.buttonYes_Click);
+            this.BtnConfirmDeletionTask_Clik.Location = new System.Drawing.Point(52, 107);
+            this.BtnConfirmDeletionTask_Clik.Name = "BtnConfirmDeletionTask_Clik";
+            this.BtnConfirmDeletionTask_Clik.Size = new System.Drawing.Size(75, 23);
+            this.BtnConfirmDeletionTask_Clik.TabIndex = 0;
+            this.BtnConfirmDeletionTask_Clik.Text = "Да";
+            this.BtnConfirmDeletionTask_Clik.UseVisualStyleBackColor = true;
+            this.BtnConfirmDeletionTask_Clik.Click += new System.EventHandler(this.btnConfirmDeletionTask_Clik);
             // 
-            // buttonNo
+            // BtnCancelDeletionTask_Clik
             // 
-            this.buttonNo.Location = new System.Drawing.Point(170, 107);
-            this.buttonNo.Name = "buttonNo";
-            this.buttonNo.Size = new System.Drawing.Size(75, 23);
-            this.buttonNo.TabIndex = 1;
-            this.buttonNo.Text = "Нет";
-            this.buttonNo.UseVisualStyleBackColor = true;
-            this.buttonNo.Click += new System.EventHandler(this.buttonNo_Click);
+            this.BtnCancelDeletionTask_Clik.Location = new System.Drawing.Point(170, 107);
+            this.BtnCancelDeletionTask_Clik.Name = "BtnCancelDeletionTask_Clik";
+            this.BtnCancelDeletionTask_Clik.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelDeletionTask_Clik.TabIndex = 1;
+            this.BtnCancelDeletionTask_Clik.Text = "Нет";
+            this.BtnCancelDeletionTask_Clik.UseVisualStyleBackColor = true;
+            this.BtnCancelDeletionTask_Clik.Click += new System.EventHandler(this.btnCancelDeletionTask_Clik);
             // 
             // label1
             // 
@@ -68,8 +68,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 161);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonNo);
-            this.Controls.Add(this.buttonYes);
+            this.Controls.Add(this.BtnCancelDeletionTask_Clik);
+            this.Controls.Add(this.BtnConfirmDeletionTask_Clik);
             this.Name = "RemoveTask";
             this.Text = "Удалить задачу";
             this.ResumeLayout(false);
@@ -79,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonYes;
-        private System.Windows.Forms.Button buttonNo;
+        private System.Windows.Forms.Button BtnConfirmDeletionTask_Clik;
+        private System.Windows.Forms.Button BtnCancelDeletionTask_Clik;
         private System.Windows.Forms.Label label1;
 
     }
